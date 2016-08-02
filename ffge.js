@@ -66,12 +66,6 @@
 		document.getElementsByTagName('head')[0].appendChild(s);
 	}
 	
-	if(typeof jQuery == 'undefined') {
-		loadJS(('https:' == document.location.protocol ? 'https://' : 'http://') + 'ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js', function(){
-			jQuery.noConflict();
-			main(jQuery);
-		});
-	}else {
-		main(jQuery);
-	}
+	main(jQuery);
+	
  })();
